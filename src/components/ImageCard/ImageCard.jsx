@@ -1,5 +1,3 @@
-// ImageCard.jsx
-
 import PropTypes from 'prop-types';
 
 const ImageCard = ({ imageUrl, altText }) => {

@@ -1,13 +1,18 @@
-import { Field, Form, Formik } from "formik";
+import { Field, Form, Formik } from 'formik';
 import PropTypes from 'prop-types';
+import toast from 'react-hot-toast';
 
 export default function SearchBar({ onSearch }) {
   return (
     <Formik
-      initialValues={{ topic: "" }}
+      initialValues={{ topic: '' }}
       onSubmit={(values, actions) => {
-        onSearch(values.topic);
-        actions.resetForm();
+        if (!values.topic.trim()) {
+          toast.error('Please enter a search term');
+        } else {
+          onSearch(values.topic);
+          actions.resetForm();
+        }
       }}
     >
       <Form>
@@ -16,7 +21,7 @@ export default function SearchBar({ onSearch }) {
           name="topic"
           autoComplete="off"
           autoFocus
-          placeholder="Search images and photos"
+          placeholder="Search images "
         />
         <button type="submit">Search</button>
       </Form>

@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 import ImageCard from '../ImageCard/ImageCard';
 

@@ -1,5 +1,3 @@
-// App.jsx
-
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchBar from '../SearchBar/SearchBar';
@@ -7,6 +5,7 @@ import ImageGallery from '../ImageGallery/ImageGallery';
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import ImageModal from '../ImageModal/ImageModal';
+import { Toaster } from 'react-hot-toast';
 
 export default function App() {
   const [images, setImages] = useState([]);
@@ -74,6 +73,7 @@ export default function App() {
           onRequestClose={closeModal}
         />
       )}
+      <Toaster />
     </div>
   );
 }
