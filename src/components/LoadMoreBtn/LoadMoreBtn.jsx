@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
 
-export default function LoadMoreBtn({ onClick }) {
+export default function LoadMoreBtn({ onLoadMore }) {
   return (
-    <button onClick={onClick}>
+    <button onClick={onLoadMore}>
       Load more
     </button>
   );
 }
 
 LoadMoreBtn.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onLoadMore: PropTypes.func.isRequired,
 };
-
