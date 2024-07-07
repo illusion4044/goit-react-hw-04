@@ -2,7 +2,7 @@ import  { useEffect, useState } from "react";
 import axios from "axios";
 import SearchBar from '../SearchBar/SearchBar';
 import ImageGallery from '../ImageGallery/ImageGallery';
-import ImageCard from '../ImageCard/ImageCard';
+
 // import Loader from '../Loader/Loader';
 // import ErrorMessage from '../ErrorMessage/ErrorMessage';
 // import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
@@ -48,7 +48,7 @@ export default function App() {
       {loading && <p>Loading images, pease wait...</p>}
       {error && <p>Unexpected error, plese refresh this page !</p>}
       {images.length > 0 && <ImageGallery items={images} />}
-      <ImageCard/>
+      
     </div>
   );
 }

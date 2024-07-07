@@ -1,12 +1,18 @@
+// ImageCard.jsx
+
 import PropTypes from 'prop-types';
-export default function ImageCard({ imageUrl, altText }) {
+
+const ImageCard = ({ imageUrl, altText }) => {
   return (
     <div>
       <img src={imageUrl} alt={altText} />
     </div>
   );
-}
+};
+
 ImageCard.propTypes = {
-    imageUrl: PropTypes.string.isRequired,
-    altText: PropTypes.string.isRequired,
-  };
+  imageUrl: PropTypes.string.isRequired,
+  altText: PropTypes.string.isRequired,
+};
+
+export default ImageCard;
