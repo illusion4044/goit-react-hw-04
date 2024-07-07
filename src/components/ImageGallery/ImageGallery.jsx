@@ -1,3 +1,5 @@
+import ImageCard from '../ImageCard/ImageCard';
+
 export default function imageGallery({ items }) {
     return (
       <ul>
