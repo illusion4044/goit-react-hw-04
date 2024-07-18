@@ -6,6 +6,7 @@ import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import ImageModal from '../ImageModal/ImageModal';
 import { Toaster } from 'react-hot-toast';
+import css from './App.module.css';
 
 export default function App() {
   const [images, setImages] = useState([]);
@@ -54,7 +55,7 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className={css.App}>
       <h1>TheSearch</h1>
       <SearchBar onSearch={handleSearch} />
       {loading && <p>Loading images, please wait...</p>}

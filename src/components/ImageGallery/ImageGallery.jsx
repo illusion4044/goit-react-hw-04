@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import ImageCard from '../ImageCard/ImageCard';
+import css from './ImageGallery.module.css';
 
 export default function ImageGallery({ items, onImageClick }) {
   return (
-    <ul>
+    <ul className={css.imageGallery}>
       {items.map((item) => (
-        <li key={item.id}>
+        <li key={item.id} className={css.imageCard}>
           <ImageCard
             imageUrl={item.urls.small}
             altText={item.alt_description}

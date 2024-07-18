@@ -1,0 +1,21 @@
+.imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .imageCard {
+    list-style: none;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .imageCard img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }

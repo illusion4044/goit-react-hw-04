@@ -1,6 +1,7 @@
 import { Field, Form, Formik } from 'formik';
 import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
+import css from './SearchBar.module.css';
 
 export default function SearchBar({ onSearch }) {
   return (
@@ -15,7 +16,7 @@ export default function SearchBar({ onSearch }) {
         }
       }}
     >
-      <Form>
+      <Form className={css.searchBar}>
         <Field
           type="text"
           name="topic"

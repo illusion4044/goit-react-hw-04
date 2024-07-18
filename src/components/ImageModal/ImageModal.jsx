@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
-
+import css from './ImageModal.module.css';
 
 
 export default function ImageModal({ isOpen, imageUrl, altText, onRequestClose }) {
     return (
       <Modal
         isOpen={isOpen}
+        className={css.modalContent}
         onRequestClose={onRequestClose}
         contentLabel="Image Modal"
         style={{
